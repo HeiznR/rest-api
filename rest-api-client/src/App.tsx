@@ -11,7 +11,7 @@ function App() {
   const [data, setData] = useState();
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/api");
+      const response = await fetch("/users");
       const data = await response.json();
       setData(data);
     };
