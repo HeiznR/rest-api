@@ -1,12 +1,15 @@
 import express, { Request, Response } from "express";
-const users = express();
+const app = express();
 
 const port = process.env.PORT || 8002;
 
-users.use("/", (req: Request, res: Response) => {
-  return res.json({ name: "Product", age: 24 });
+app.get("/vlad", (req: Request, res: Response) => {
+  res.json({ name: "Product1", age: 25 });
+});
+app.get("/", (req: Request, res: Response) => {
+  res.json({ name: "Product", age: 24 });
 });
 
-users.listen(port, () => {
+app.listen(port, () => {
   console.log(`microservice run on posrt:${port}`);
 });

@@ -1,1 +1,5 @@
+.DS_Store
 node_modules
+gateway/dist/
+users/dist/
+products/dist/
